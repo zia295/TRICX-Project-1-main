@@ -1,0 +1,740 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    width: 80%;
+    padding: 1%;
+    margin: 0 auto;
+}
+
+.text-center{
+    text-align: center;
+    background-image: url(images/title.avif);
+}
+
+.text-left{
+    margin-left: 500px;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.title{
+    text-align: center;
+    color:black;
+    text-decoration: none;
+    font-size: 50px;
+}
+
+.img-responsive{
+    width: 100%;
+}
+
+.img-curve{
+    border-radius: 15px;
+}
+
+h2{
+    color: aquamarine;
+    font-size: 10px;
+    margin-bottom: 1.5rem;
+}
+
+h3{
+    font-size: 1.5rem;
+    color:blue;
+    text-align: center;
+}
+
+.float-container{
+    position: relative;
+}
+
+.float-text{
+    position: absolute;
+    bottom: 50%;
+    left: 40%;
+}
+
+.btn{
+    padding: 1%;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.btn-primary{
+        background-color:black;
+        color:white;
+        cursor: pointer;
+    
+}
+
+.btn-primary:hover{
+    color: white;
+    background-color:#ff4757;
+}
+
+
+/* searchbar section starts here */
+.searchbar{
+    padding: 5px;
+}
+
+.searchbar input{
+    padding: 1%;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5%;
+    
+}
+
+.icons{
+    float: right;
+    margin: 5px 2px;
+    border-radius: 50%;
+    padding: 10px;
+    text-decoration: none;
+}
+.icons a{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.icons :hover{
+    color: #ff4757;
+    
+}
+
+/* searchbar section ends here */
+  
+
+/*  Menu for CSS starts here  */
+
+.logo{
+    width: 10%;
+    float: left;
+}
+
+.menu{
+    padding:20px;
+}
+
+.menu ul{
+    list-style-type: none;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    font-weight: bold;
+    color:blue;
+}
+
+.menu ul li a:hover{
+    color: #ff4757;
+}
+
+.menu ul li{
+    display: inline;
+    padding: 1%;
+}
+
+.dropdown{
+    margin-left: 700px;
+    display:inline-block;
+}
+.dropbtn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.menu2{
+    margin-top: -50px;
+    margin-right: 90px;
+}
+
+/* Dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:#3498db;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change button color on hover */
+.dropdown:hover .dropbtn {
+    background-color: #2980b9;
+}
+
+
+
+.menu .dropdown{
+    margin-top: -250px;
+}
+
+/*  Menu for CSS ends here  */
+
+
+
+/* Homepage section starts here */
+
+.subtitle{
+    padding: 1%;
+    background-color: blueviolet;
+    text-align: center;
+    box-shadow: inset;
+    color: black;
+}
+
+
+
+.box-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 250px;
+    margin-right: 250px;
+}
+
+.box{
+    
+    background-color:antiquewhite;
+    min-height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    width: 190px;
+    height: 300px;
+    object-fit: cover;
+    
+}
+
+.event-name{
+    margin-left: -5pc;
+}
+.ticket{
+    margin-left: -150px;
+    font-size: 12px;
+}
+
+.index-img{
+    height: 140px;
+}
+.click-more{
+    margin-left: 600px;
+}
+.click-more .more{
+    font-size: 15px;
+    padding: 15px;
+}
+
+.more:hover{
+    background-color: #ff4757;
+}
+
+
+
+.video{
+    min-width: 100%;
+    min-height: 100%;
+
+}
+
+p{
+    font-size: 10px;
+}
+
+.safraz{
+    text-decoration: none;
+}
+
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.slides-fade {
+    display: none;
+    text-align: center;
+}
+
+/* Ensure the first slide is visible initially */
+.slides-fade:first-child {
+    display: block;
+}
+
+.slides-fade img {
+    vertical-align: middle;
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+}
+
+/* Navigation buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    transform: translateY(-50%);
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.next {
+    right: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Dots */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.testimonials{
+    display: flex;
+    gap: 150px;
+    justify-content: center;
+    background-color: #f8f8f8;
+    padding: 35px;
+    font-size: 25px;
+    
+}
+.testimonials p{
+    font-size: 20px;
+}
+
+.testimonials{
+    text-align: center;
+    max-width: 100%;
+    font-style: italic;
+}
+.testimonials span{
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.newsletter{
+    text-align: center;
+    margin: 20px 0;
+}
+.newsletter input{
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+.newsletter button{
+    padding: 10px 20px;
+    background-color: #717171;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+.newsletter button:hover{
+    background-color: #ff4757;
+}
+
+
+/* Homepage section ends here */
+
+
+/* About us section starts here */
+.title{
+    margin-left: 40px;
+}
+.description{
+    font-size: 15px;
+    margin-left: 30px;
+}
+
+/* About us section ends here */
+
+/* Contact section starts here */
+.form{
+    margin-left: 100px;
+}
+
+.inputs{
+    padding: 10px;
+    width: 50%;
+}
+
+.form button{
+    padding: 20px;
+    margin-left: 40px;
+}
+.form button:hover{
+    background-color: #ff4757;
+}
+
+.con-title{
+    margin-left: 50px;
+    font-size: 40px;
+}
+
+.subtitle1{
+    margin-left: 50px;
+    font-size: 15px;
+
+}
+
+.map{
+    margin-left: 1000px;
+    margin-top: -500px;
+}
+
+/* Contact section ends here */
+
+
+/* Login section starts here */
+.login-form{
+    margin-left: 250px;
+}
+.login-input{
+    padding: 10px;
+    width: 30%;
+}
+.login-butt{
+    padding: 8px;
+}
+.login-butt:hover{
+    background-color: #ff4757;
+}
+.register-link{
+    font-size: 15px;
+}
+.register-link a{
+    text-decoration: none;
+}
+.log-title{
+    font-size: 25px;
+    margin-left: 300px;
+}
+
+/* Login section ends here */
+
+/* Registration section starts here */
+.signup-form{
+    margin-left: 250px;
+}
+.signup-input{
+    padding: 10px;
+    width: 30%;
+}
+.signup-butt{
+    padding: 10px;
+}
+.signup-butt:hover{
+    background-color: #ff4757;
+}
+.signup-link{
+    font-size: 15px;
+}
+.signup-link a{
+    text-decoration: none;
+}
+.Reg-title{
+    font-size: 25px;
+    margin-left: 300px;
+}
+/* Registration section ends here */
+
+/* footer section starts here */
+footer {
+    background-color:#f8f8f8;
+    color:#222;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+footer h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+footer p, footer ul, footer a {
+    color:#222;
+    text-decoration: none;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    margin-bottom: 8px;
+}
+
+footer ul li a:hover {
+    color:#ff4757;
+}
+
+.footer-social a {
+    color:#222;
+    font-size: 20px;
+    margin-right: 10px;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color:#ff4757;
+}
+
+.footer-bottom {
+    background-color:#f8f8f8;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 12px;
+}
+
+
+
+/* footer section ends here  */
+
+
+
+/* footer section ends here  */
+
+
+/* Media section starts here  */
+
+@media  only screen and (max-width:768px) {
+    .logo{
+        width: 20%;
+        float: none;
+        margin: 1% auto;
+    }
+    .menu{
+        margin-left: -125px;
+        margin-right: 100px;
+    }
+    .menu1{
+        margin-right: -550px;
+        margin-top: -57px;
+        
+    }
+    .menu2{
+        margin-top: -50px;
+        margin-right: 650px;
+    }
+    .menu .dropdown{
+        margin-top: -200px;
+    }
+    .dropbtn{
+        margin-top: -90px;
+    }
+
+    .menu ul{
+        text-align: center;
+        
+    }
+
+    .title{
+        font-size: 30px;
+    }
+
+    .logo{
+        float: left;
+    }
+
+    .box-container{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .box{
+        width: 190px;
+        height: 300px;
+        
+    }
+
+    .footer{
+    width:fit-content;   
+}
+
+.click-more{
+    margin-left: 250px;
+}
+
+.prev, .next, .text{
+    font-size: 11px;
+}
+.slideshow-container{
+    margin-left: auto;
+    margin-right: auto;
+}
+.slides-fade img {
+    vertical-align: middle;
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+}
+.testimonials{
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    background-color:white;
+    padding: 15px;
+    font-size: 25px;
+    
+}
+.testimonials p{
+    font-size: 15px;
+}
+
+.testimonials{
+    text-align: center;
+    max-width: 100%;
+    font-style: italic;
+}
+.testimonials span{
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.testimonials .box{
+    height: 30px;
+   margin-left: 30px;
+}
+
+.newsletter{
+    text-align: center;
+    margin: 20px 0;
+}
+.newsletter input{
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+.newsletter button{
+    padding: 10px 20px;
+    background-color: #717171;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+.newsletter button:hover{
+    background-color: #ff4757;
+}
+.map{
+    margin-left: 600px;
+    margin-top: -400px;
+    width: 300px;
+    height: 200px;
+}
+
+
+}
+
+
+
+/* Media section ends here */
+
+/* this code is for slideshow images */
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
