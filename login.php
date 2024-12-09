@@ -14,5 +14,5 @@
         <br>
         <button class="login-butt" type="submit">Login</button>
 
-        <a class="register-link" href="login.php">If not registered</a>
+        <a class="register-link" href="login.php">If not registered, Click here</a>
     </form>

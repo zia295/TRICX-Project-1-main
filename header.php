@@ -1,7 +1,7 @@
 <?php
 /*include 'database.php';*/
 session_start();
-$isLoggedIn = isset($_SESSION['id']);
+$isLoggedIn = isset($_SESSION['name']);
 $isAdmin = isset($_SESSION['role']) && $_SESSION['role'] == 'admin';
 $current_page = basename($_SERVER ['PHP_SELF']);
 
@@ -54,32 +54,45 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])){
 <br>
 
 <!----navbar section starts here----->
-<div class="navbar">
-    <div class="container">
-        <div class="logo">
-            <a href="index.php" title="logo" <?php if ($current_page == 'index.php') echo 'class="active"'; ?>>
+
+<section>
+
+<header class="header">
+                 <a href="index.php" class="logo" <?php if ($current_page == 'index.php') echo 'class="active"'; ?>>
                 <img src="./images/logo.jpg" alt="logo" class="img-responsive img-curve">
             </a>
+        <nav class="navbar">
+            <a href="./index.php" <?php if ($current_page == 'index.php') echo 'class="active"'; ?>>Home</a>
+            <a href="./about.php" <?php if ($current_page == 'about.php') echo 'class="active"'; ?>>About</a>
+            <a href="./events.php" <?php if ($current_page == 'events.php') echo 'class="active"'; ?>>Events</a>
+            <a href="./contact.php" <?php if ($current_page == 'contact.php') echo 'class="active"'; ?>>Contact</a>
+          
+        </nav>
+
+        <div class="auth">
+            <?php if ($isLoggedIn) : ?>
+                <div class="dropdown">
+                    <button class="dropbtn">Hello <?php echo $_SESSION['nickname']; ?></button>
+                    <div class="dropdown-content">
+                        <a href="logout.php" class="logout">Logout</a>
+                        <?php if ($isLoggedIn) : ?>
+                            <a href="./manage_devices.php">Manage Devices</a>
+                        <?php endif; ?>
+                        <?php if ($isAdmin) : ?>
+                            <a href="./manage_events.php">Manage Events</a>
+                        <?php endif; ?>
+                         <?php if ($isAdmin) : ?>
+                            <a href="./manage_members.php">Manage Members</a>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            <?php else : ?>
+                <a href="./signup.php">Register</a>
+                <a href="./login.php">Login</a>
+            <?php endif; ?>
         </div>
+    </header>
         
-
-        <div class="menu text-left">
-            <ul>
-                <li><a href="index.php" <?php if($current_page == 'index.php') echo 'class="active"'; ?>>Home</a></li>
-                <li><a href="about.php" <?php if($current_page == 'about.php') echo 'class="active"'; ?>>About</a></li>
-                <li><a href="events.php" <?php if($current_page == 'events.php') echo 'class="active"'; ?>>Events</a></li>
-                <li><a href="contact.php" <?php if($current_page == 'contact.php') echo 'class="active"'; ?>>Contact</a></li>
-                <li><a href="login.php" <?php if($current_page == 'login.php') echo 'class="active"'; ?>>Login</a></li>
-                <li><a href="signup.php" <?php if($current_page == 'signup.php') echo 'class="active"'; ?>>Signup</a></li>
-                </ul>
-    
-        </div>
-</div>
-    
-
-            
-
-
 
             <div class="clearfix"></div>
                 </div>
@@ -103,6 +116,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])){
 
 <br>
 <br>
-
-
-

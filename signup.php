@@ -16,7 +16,7 @@
         <br>
         <button class="signup-butt" type="submit">Register</button>
 
-        <a class="signup-link" href="login.php">If registered, Log in here</a>
+        <a class="signup-link" href="login.php">If registered, Click here</a>
 
     </form>
 

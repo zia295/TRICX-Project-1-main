@@ -117,88 +117,77 @@ h3{
 
 /*  Menu for CSS starts here  */
 
-.logo{
-    width: 10%;
-    float: left;
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 0 3%;
+    margin: 2rem 7%;
+    border-radius: 30rem;
+    box-shadow: 0px 0px 17px -2px rgba(0,0,0,0.75);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.menu{
-    padding:20px;
+.header .logo img{
+    height: 7rem;
+    margin-left: 0.1rem;
 }
 
-.menu ul{
-    list-style-type: none;
+.header .navbar a{
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: var(--black-color);
+    border-bottom: 0.2rem solid transparent;
+}
+.header .auth a{
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: var(--black-color);
+    border-bottom: 0.2rem solid transparent;
 }
 
-.menu ul li a{
-    text-decoration: none;
-    font-weight: bold;
-    color:blue;
+.header .navbar a.active,
+.header .navbar a:hover{
+    border-color: var(--main-color);
+    padding-bottom:.5rem ;
 }
 
-.menu ul li a:hover{
-    color: #ff4757;
-}
-
-.menu ul li{
-    display: inline;
-    padding: 1%;
-}
-
-.dropdown{
-    margin-left: 700px;
-    display:inline-block;
-}
-.dropbtn {
-    background-color: #3498db;
-    color: white;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
+.header .buttons a{
     cursor: pointer;
-}
-
-.menu2{
-    margin-top: -50px;
-    margin-right: 90px;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 /* Dropdown content */
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color:#3498db;
+    background-color: #f1f1f1;
     min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
     z-index: 1;
 }
 
-.dropdown-content a{
+/* Style the links inside the dropdown */
+.dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    text-align: left;
 }
 
+/* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: #ddd;
 }
 
-/* Show dropdown content on hover */
+/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
-}
-
-/* Change button color on hover */
-.dropdown:hover .dropbtn {
-    background-color: #2980b9;
-}
-
-
-
-.menu .dropdown{
-    margin-top: -250px;
 }
 
 /*  Menu for CSS ends here  */
@@ -587,42 +576,79 @@ footer ul li a:hover {
 /* Media section starts here  */
 
 @media  only screen and (max-width:768px) {
-    .logo{
-        width: 20%;
-        float: none;
-        margin: 1% auto;
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        padding: 0 3%;
+        margin: 2rem 7%;
+        border-radius: 30rem;
+        box-shadow: 0px 0px 17px -2px rgba(0,0,0,0.75);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
     }
-    .menu{
-        margin-left: -125px;
-        margin-right: 100px;
+    
+    .header .logo img{
+        height: 7rem;
+        margin-left: 0.1rem;
     }
-    .menu1{
-        margin-right: -550px;
-        margin-top: -57px;
+    
+    .header .navbar a{
+        margin: 0 1rem;
+        font-size: 1.6rem;
+        color: var(--black-color);
+        border-bottom: 0.2rem solid transparent;
+    }
+    .header .auth a{
+        margin: 0 1rem;
+        font-size: 1.6rem;
+        color: var(--black-color);
+        border-bottom: 0.2rem solid transparent;
         
     }
-    .menu2{
-        margin-top: -50px;
-        margin-right: 650px;
-    }
-    .menu .dropdown{
-        margin-top: -200px;
-    }
-    .dropbtn{
-        margin-top: -90px;
-    }
-
-    .menu ul{
-        text-align: center;
+    
+    .header .navbar a.active,
+    .header .navbar a:hover{
+        border-color: var(--main-color);
+        padding-bottom:.5rem ;
         
     }
-
-    .title{
-        font-size: 30px;
+    
+    .header .buttons a{
+        cursor: pointer;
+        font-size: 2.5rem;
+        margin-left: 2rem;
+        background-color: transparent;
+        cursor: pointer;
     }
-
-    .logo{
-        float: left;
+    
+    /* Dropdown content */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        z-index: 1;
+    }
+    
+    /* Style the links inside the dropdown */
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+    
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
     }
 
     .box-container{
