@@ -2,7 +2,7 @@
 
 session_start();
 
-if($_SERVER ['REQUEST_METHOD'] == 'POST'){
+if($_SERVER ['REQUEST_METHOD'] == "POST"){
     $email = $_POST['email'] ?? '';
     $password = $_POST['password'] ?? '';
 
@@ -18,7 +18,7 @@ if($_SERVER ['REQUEST_METHOD'] == 'POST'){
         if (password_verify($password, $user['hashed_password'])){
             $_SESSION['id'] = $user['id'];
             $_SESSION['name'] = $user['name'];
-            $_SESSION['role_id'] = $user['role_id'];
+            $_SESSION['role'] = $user['role'];
             header("Location: index.php");
             exit();
         } else {

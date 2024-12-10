@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])){
             </a>
         <nav class="navbar">
             <a href="./index.php" <?php if ($current_page == 'index.php') echo 'class="active"'; ?>>Home</a>
-            <a href="./about.php" <?php if ($current_page == 'about.php') echo 'class="active"'; ?>>About</a>
+            <a href="./about.php" <?php if ($current_page == 'about.php') echo'class="active"'; ?>>About</a>
             <a href="./events.php" <?php if ($current_page == 'events.php') echo 'class="active"'; ?>>Events</a>
             <a href="./contact.php" <?php if ($current_page == 'contact.php') echo 'class="active"'; ?>>Contact</a>
           
