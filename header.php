@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])){
         <div class="auth">
             <?php if ($isLoggedIn) : ?>
                 <div class="dropdown">
-                    <button class="dropbtn">Hello <?php echo $_SESSION['nickname']; ?></button>
+                    <button class="dropbtn">Hello <?php echo $_SESSION['name']; ?></button>
                     <div class="dropdown-content">
                         <a href="logout.php" class="logout">Logout</a>
                         <?php if ($isLoggedIn) : ?>

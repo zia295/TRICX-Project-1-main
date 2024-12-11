@@ -2,7 +2,7 @@
 
 session_start();
 
-if($_SERVER ['REQUEST_METHOD'] == "POST"){
+if($_SERVER ['REQUEST_METHOD'] === "POST"){
     $email = $_POST['email'] ?? '';
     $password = $_POST['password'] ?? '';
 
@@ -16,9 +16,8 @@ if($_SERVER ['REQUEST_METHOD'] == "POST"){
     if ($stmt->rowCount() > 0){
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
         if (password_verify($password, $user['hashed_password'])){
-            $_SESSION['id'] = $user['id'];
             $_SESSION['name'] = $user['name'];
-            $_SESSION['role'] = $user['role'];
+            $_SESSION['id'] = $user['id'];
             header("Location: index.php");
             exit();
         } else {

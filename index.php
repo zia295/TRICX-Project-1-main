@@ -30,7 +30,7 @@ of images instead of video--->
 
   <div class="slides-fade">
     <div class="numbertext">3 / 3</div>
-    <img src="./images/event6.webp" alt="London"><br>
+    <img src="./images/event6.jpg" alt="London"><br>
     <div class="text">London</div>
   </div>
   <br>
