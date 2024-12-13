@@ -16,3 +16,12 @@
 
         <a class="register-link" href="login.php">If not registered, Click here</a>
     </form>
+    <br>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <?php include 'footer.php'; ?>

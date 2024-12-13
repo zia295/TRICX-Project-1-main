@@ -8,27 +8,24 @@ if($_SERVER ['REQUEST_METHOD'] === "POST"){
 
     try{
 
-    $sql = "SELECT id, email , hashed_password from registered_user WHERE email = :email";
-    $stmt = $conn->prepare($sql);
+    $pdo = "SELECT id, email , hashed_password from registered_user WHERE email = :email";
+    $stmt = $conn->prepare($pdo);
     $stmt->bindParam(':email', $email);
     $stmt->execute();
 
-    if ($stmt->rowCount() > 0){
+    if($stmt->rowCount() > 0){
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
-        if (password_verify($password, $user['hashed_password'])){
-            $_SESSION['name'] = $user['name'];
+        if($user && password_verify($password, $user['hashed_password'])){ 
             $_SESSION['id'] = $user['id'];
-            header("Location: index.php");
-            exit();
-        } else {
-            echo "Invalid password";
-        }
-    } else {
-        echo "No user found with this email";
+            $_SESSION['name'] = $user['name'];
     }
-} catch (PDOException $e) {
-    echo "Error: " . $e->getMessage();
-}
-} else {
-echo "Invalid request";
-}
+                header("Location: index.php");
+                exit();
+            } else{
+                echo "Invalid username or password";
+            }
+            } catch (PDOException $e){
+                echo ("Invalid username or password:" . $e->getMessage());
+            }
+        }
+    
