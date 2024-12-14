@@ -62,10 +62,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])){
                 <img src="./images/logo.jpg" alt="logo" class="img-responsive img-curve">
             </a>
         <nav class="navbar">
-            <a href="./index.php" <?php if ($current_page == 'index.php') echo 'class="active"'; ?>>Home</a>
-            <a href="./about.php" <?php if ($current_page == 'about.php') echo'class="active"'; ?>>About</a>
-            <a href="./events.php" <?php if ($current_page == 'events.php') echo 'class="active"'; ?>>Events</a>
-            <a href="./contact.php" <?php if ($current_page == 'contact.php') echo 'class="active"'; ?>>Contact</a>
+            <a href="index.php" <?php if ($current_page == 'index.php') echo 'class="active"'; ?>>Home</a>
+            <a href="about.php" <?php if ($current_page == 'about.php') echo'class="active"'; ?>>About</a>
+            <a href="events.php" <?php if ($current_page == 'events.php') echo 'class="active"'; ?>>Events</a>
+            <a href="contact.php" <?php if ($current_page == 'contact.php') echo 'class="active"'; ?>>Contact</a>
           
         </nav>
 
@@ -87,8 +87,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])){
                     </div>
                 </div>
             <?php else : ?>
-                <a href="./signup.php">Register</a>
-                <a href="./login.php">Login</a>
+                <a href="signup.php">Register</a>
+                <a href="login.php">Login</a>
             <?php endif; ?>
         </div>
     </header>
