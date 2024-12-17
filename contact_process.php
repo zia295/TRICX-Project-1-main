@@ -7,12 +7,13 @@ use PHPMailer\PHPMailer\Exception;
 $mail = new PHPMailer(true);
 
 if($_SERVER["REQUEST_METHOD"] === "POST"){
-    $name = trim($_POST['name']);
-    $email = trim($_POST['email']);
-    $message = trim($_POST['message']);
+    $name = trim($_POST['name']) ?? '';
+    $email = trim($_POST['email']) ?? '';
+    $subject = trim($_POST['subject']) ?? '';
+    $message = trim($_POST['message']) ?? '';
 
 
-    if (empty($name) || empty($email) || empty($message)){
+    if (empty($name) || empty($email) || empty($subject) || empty($message)) {
         die("All fields are required");
     }
 
@@ -32,7 +33,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         $mail->setFrom($email, $name);
         $mail->addAddress('admin@example.com');
 
-        $mail->Subject = $subject;
+        $mail->subject = $subject;
         $mail->Body = "You recieved a message from $name:\n\n$message";
 
         $mail->send();

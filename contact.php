@@ -15,6 +15,8 @@
     <br>
         <input class="inputs" type="text" name="email" placeholder="your email address" required><br>
         <br>
+        <input class="inputs" type="text" name="subject" placeholder="subject" required><br>
+        <br>
         <input class="inputs" type="text" name="message" placeholder="your message" required><br>
         <br>
         <button type="submit">Submit</button>
