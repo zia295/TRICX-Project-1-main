@@ -10,7 +10,7 @@
 <h4 class="subtitle">Feel free to get in touch...</h4>
 <br>
 <br>
-<form class="form" action="contact.php" method="Post" required>
+<form class="form" action="contact_process.php" method="Post" required>
     <input class="inputs" type="text" name="name" placeholder="your name" required><br>
     <br>
         <input class="inputs" type="text" name="email" placeholder="your email address" required><br>

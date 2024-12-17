@@ -596,7 +596,7 @@ footer ul li a:hover {
     }
     
     .header .navbar a{
-        margin: 0 0rem;
+        margin: 0 0.5rem;
         font-size: 1.0rem;
         color: var(--black-color);
         border-bottom: 0.2rem solid transparent;
