@@ -75,14 +75,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])){
                     <button class="dropbtn">Hello <?php echo $_SESSION['name']; ?></button>
                     <div class="dropdown-content">
                         <a href="logout.php" class="logout">Logout</a>
-                        <?php if ($isLoggedIn) : ?>
-                            <a href="./manage_devices.php">Manage Devices</a>
-                        <?php endif; ?>
                         <?php if ($isAdmin) : ?>
                             <a href="./manage_events.php">Manage Events</a>
-                        <?php endif; ?>
-                         <?php if ($isAdmin) : ?>
-                            <a href="./manage_members.php">Manage Members</a>
                         <?php endif; ?>
                     </div>
                 </div>

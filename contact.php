@@ -13,11 +13,13 @@
 <form class="form" action="contact_process.php" method="Post" required>
     <input class="inputs" type="text" name="name" placeholder="your name" required><br>
     <br>
-        <input class="inputs" type="text" name="email" placeholder="your email address" required><br>
+        <input class="inputs" type="email" name="email" placeholder="your email address" required><br>
+        <br>
+        <input class="inputs" type="email" name="recipient_email" placeholder="Recipient's Email" required><br>
         <br>
         <input class="inputs" type="text" name="subject" placeholder="subject" required><br>
         <br>
-        <input class="inputs" type="text" name="message" placeholder="your message" required><br>
+        <input class="inputs" type="message" name="message" placeholder="your message" required><br>
         <br>
         <button type="submit">Submit</button>
     </form>

@@ -1,177 +1,62 @@
-<?php include "header.php"; ?>
+<?php include "header.php";
+require_once 'database.php';
 
+$sql = "SELECT * FROM event";
+$stmt = $conn->query($sql);
+
+if ($stmt->rowCount() > 0){
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+} else{
+    $result = [];
+}
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<section class="products" id="products">
+    <h1 class="header">Our <span>Events</span></h1>
+    <div class="box-container">
+        <?php
+        if(!empty($result)){
+            foreach ($result as $row) {
+                echo '<div class="box">';
+                echo '<div class="box-head">';
+                echo '<div class="image">';
+                echo '<img src="./images/event4.jpg" alt="' . $row["event_name"] . '">';
+                echo '</div>';
+                echo '<span class="title">' . $row["event_name"] . '</span>';
+                echo '<br></br>';
+                echo '<a href="#" class="name">' . $row["event_venue"] . '</a>';
+                echo '</div>';
+                echo '<div class="box-bottom">';
+                echo '<div class="info">';
+                echo '<b class="date">' . $row["event_date"] . '</b>';
+                echo '</div>';
+                echo '<div class="product-btn">';
+                echo '<a href="./images/event1.jpg"></a>';
+                echo '</div>';
+                echo '</div>';
+                echo '</div>';
+            }
+        } else{
+            echo "No events found";
+        }
+        ?>
+    </div>
+
+</section>
+</body>
+</html>
 
 <br>
-
-<section>
-    <div class="box-container">
-            <div class="box-head">
-                <div class="box">
-                    <img class="index-img" src="./images/event1.jpeg" alt="image">
-                    <br>
-                    <hr>
-                    <p class="event-name"><b>ZIA HASSANKHAIL</b><br></p>
-                    <br>
-                        <p><b>25, November 2024</b><br></p>
-                        <br>
-                        <p><b>Lotus Tower Colombo</b><br></p>
-                        <br>
-                        <p>Outdoor Musical Concert <br></p>
-                        <br>
-                        <p class="ticket">Tickets: £25 <br></p>
-
-                        <a class="safraz" href="news.php"><button>Book Now</button></a>
-                    </p>
-
-                </div>
-                </div>
-    
-    <br>
-    <br>
-    <br>
-
-    <div class="box-head">
-                <div class="box">
-                <img class="index-img" src="./images/event2.jpeg" alt="image">
-                <br>
-                <hr>
-                    <p class="event-name"><b>ZIA HASSANKHAIL</b><br></p>
-                    <br>
-                    <p><b>25, November 2024</b><br></p>
-                        <br>
-                        <p><b>Lotus Tower Colombo</b><br></p>
-                        <br>
-                        <p>Outdoor Musical Concert <br></p>
-                        <br>
-                        <p class="ticket">Tickets: £25 <br></p>
-
-                        <a class="safraz" href="news.php"><button>Book Now</button></a>
-                    </p>
-
-
-        </div>
-        </div>
-    
-    <br>
-
-    
-    <div class="box-head">
-                <div class="box">
-                <img class="index-img" src="./images/event3.webp" alt="image">
-                <br>
-                <hr>
-                    <p class="event-name"><b>ZIA HASSANKHAIL</b><br></p>
-                    <br>
-                    <p><b>25, November 2024</b><br></p>
-                        <br>
-                        <p><b>Lotus Tower Colombo</b><br></p>
-                        <br>
-                        <p>Outdoor Musical Concert <br></p>
-                        <br>
-                        <p class="ticket">Tickets: £25 <br></p>
-
-                        <a class="safraz" href="news.php"><button>Book Now</button></a>
-                    </p>
-
-
-        </div>
-        </div>
-
-        
-    
-    </div>
-    </section>
-    <br>
-    <br>
-
-    <section>
-    <div class="box-container">
-            <div class="box-head">
-                <div class="box">
-                    <img class="index-img" src="./images/event1.jpeg" alt="image">
-                    <br>
-                    <hr>
-                    <p class="event-name"><b>ZIA HASSANKHAIL</b><br></p>
-                    <br>
-                        <p><b>25, November 2024</b><br></p>
-                        <br>
-                        <p><b>Lotus Tower Colombo</b><br></p>
-                        <br>
-                        <p>Outdoor Musical Concert <br></p>
-                        <br>
-                        <p class="ticket">Tickets: £25 <br></p>
-
-                        <a class="safraz" href="news.php"><button>Book Now</button></a>
-                    </p>
-
-                </div>
-                </div>
-    
-    <br>
-    <br>
-    <br>
-
-    <div class="box-head">
-                <div class="box">
-                <img class="index-img" src="./images/event2.jpeg" alt="image">
-                <br>
-                <hr>
-                    <p class="event-name"><b>ZIA HASSANKHAIL</b><br></p>
-                    <br>
-                    <p><b>25, November 2024</b><br></p>
-                        <br>
-                        <p><b>Lotus Tower Colombo</b><br></p>
-                        <br>
-                        <p>Outdoor Musical Concert <br></p>
-                        <br>
-                        <p class="ticket">Tickets: £25 <br></p>
-
-                        <a class="safraz" href="news.php"><button>Book Now</button></a>
-                    </p>
-
-
-        </div>
-        </div>
-    
-    <br>
-
-    
-    <div class="box-head">
-                <div class="box">
-                <img class="index-img" src="./images/event3.webp" alt="image">
-                <br>
-                <hr>
-                    <p class="event-name"><b>ZIA HASSANKHAIL</b><br></p>
-                    <br>
-                    <p><b>25, November 2024</b><br></p>
-                        <br>
-                        <p><b>Lotus Tower Colombo</b><br></p>
-                        <br>
-                        <p>Outdoor Musical Concert <br></p>
-                        <br>
-                        <p class="ticket">Tickets: £25 <br></p>
-
-                        <a class="safraz" href="news.php"><button>Book Now</button></a>
-                    </p>
-
-
-        </div>
-        </div>
-
-        
-    
-    </div>
-    </section>
-
-    <br>
-    <br>
-    
-
-
-    <a class="click-more" href="events.php"><button class="more">Click for more events</button></a>
-    <br>
-    <br>
-    <br>
 
 
     <br>
