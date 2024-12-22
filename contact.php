@@ -10,19 +10,18 @@
 <h4 class="subtitle">Feel free to get in touch...</h4>
 <br>
 <br>
-<form class="form" action="contact_process.php" method="Post" required>
-    <input class="inputs" type="text" name="name" placeholder="your name" required><br>
+<form class="form" action="contact_process.php" method="POST" required>
+    <input class="inputs" type="text" name="name" placeholder="Your name" required><br>
     <br>
-        <input class="inputs" type="email" name="email" placeholder="your email address" required><br>
-        <br>
-        <input class="inputs" type="email" name="recipient_email" placeholder="Recipient's Email" required><br>
-        <br>
-        <input class="inputs" type="text" name="subject" placeholder="subject" required><br>
-        <br>
-        <input class="inputs" type="message" name="message" placeholder="your message" required><br>
-        <br>
-        <button type="submit">Submit</button>
-    </form>
+    <input class="inputs" type="email" name="email" placeholder="Your email address" required><br>
+    <br>
+    <input class="inputs" type="text" name="subject" placeholder="Subject" required><br>
+    <br>
+    <textarea class="inputs" name="message" placeholder="Your message" required></textarea><br>
+    <br>
+    <button type="submit">Submit</button>
+</form>
+
 
     <br>
 

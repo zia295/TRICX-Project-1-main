@@ -51,16 +51,6 @@ of images instead of video--->
   <span class="dot" onclick="currentSlide(3)"></span>
 </div>
 
-<br>
-
-
-<br>
-<br>
-    
-    <h3 class="events">Events</h3>
-
-    <hr>
-    <br>
 
     <?php
 
@@ -71,9 +61,8 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $stmt = null;
 ?>
 
-
+<h3 class="events">Events</h3>
 <section class="events">
-    <h2>Upcoming Events</h2>
     <div class="event-container">
         <?php if (!empty($events)) : ?>
             <?php foreach ($events as $event) : ?>
@@ -82,6 +71,8 @@ $stmt = null;
                     <h3><?php echo $event['event_name']; ?></h3>
                     <p><strong>Date:</strong> <?php echo $event['event_date']; ?></p>
                     <p><strong>Venue:</strong> <?php echo $event['event_venue']; ?></p>
+                    <br>
+                    <p>Call us to book the event for you!</p>
                 </div>
             <?php endforeach; ?>
         <?php else : ?>

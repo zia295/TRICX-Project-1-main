@@ -1,5 +1,4 @@
 <?php include 'header.php';
-
 require 'database.php';
 
 // Fetch all events from the database
@@ -15,6 +14,7 @@ $stmt = null;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manage Events</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to CSS for styling if needed -->
 </head>
 <body>
     <h1>Manage Events</h1>
@@ -28,15 +28,24 @@ $stmt = null;
                     <th>Event Name</th>
                     <th>Event Date</th>
                     <th>Event Venue</th>
+                    <th>Actions</th> <!-- New column for buttons -->
                 </tr>
             </thead>
             <tbody>
                 <?php foreach ($events as $event) : ?>
-                    <tr> <!-- Corrected row opening -->
-                        <td><?php echo $event['event_name']; ?></td>
-                        <td><?php echo $event['event_date']; ?></td>
-                        <td><?php echo $event['event_venue']; ?></td>
-                    </tr> <!-- Corrected row closing -->
+                    <tr>
+                        <td><?php echo htmlspecialchars($event['event_name']); ?></td>
+                        <td><?php echo htmlspecialchars($event['event_date']); ?></td>
+                        <td><?php echo htmlspecialchars($event['event_venue']); ?></td>
+                        <td>
+                            <!-- Edit button -->
+                            <a href="edit_event.php?event_id=<?php echo $event['event_id']; ?>" class="btn btn-edit">Edit</a>
+                            <!-- Delete button (optional, for future use) -->
+                            <a href="delete_event.php?event_id=<?php echo $event['event_id']; ?>" class="btn btn-delete">Delete</a>
+                            <!-- View button: Link to view_event.php -->
+                            <a href="view_event.php?event_id=<?php echo $event['event_id']; ?>" class="btn btn-view">View</a>
+                        </td>
+                    </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
@@ -47,7 +56,5 @@ $stmt = null;
     <script src="script.js"></script>
 </body>
 </html>
-
-<br><br><br>
 
 <?php include 'footer.php'; ?>

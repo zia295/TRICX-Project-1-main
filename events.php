@@ -32,6 +32,8 @@ $stmt = null;
                     <h3><?php echo $event['event_name']; ?></h3>
                     <p><strong>Date:</strong> <?php echo $event['event_date']; ?></p>
                     <p><strong>Venue:</strong> <?php echo $event['event_venue']; ?></p>
+                    <br>
+                    <p>Call us to book the event for you!</p>
                 </div>
             <?php endforeach; ?>
         <?php else : ?>

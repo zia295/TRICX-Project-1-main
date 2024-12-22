@@ -31,8 +31,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])){
 <section class="searchbar text-center">
     <div class="container">
     <form action="events.php" method="post">
-        <input class="searchbar" type="search" name="search" placeholder="search" required>
-        <button type="submit" name="search" class="fa fa-search">
         </div>
         
         </form>
